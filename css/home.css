@@ -1,0 +1,17 @@
+.homebg{
+    background-image: url("white.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box1{
+    font-size: 15px;
+    margin-left: auto;
+    margin-right:auto;
+    width: 40%;
+    border: 3px white;
+    padding: 30px;
+    text-align: justify;
+    display: block;
+  
+}

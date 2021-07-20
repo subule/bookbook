@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="booklist.css">
+    <title>Book List</title>
+    <script>
+        function myFunction() {
+          // Declare variables
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+        
+          // Loop through all table rows, and hide those who don't match the search query
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+        }
+        </script>
+        
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand">BookStall.com</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="home.html">Home</a></li>
+            <li class="active"><a href="booklist.html">Books</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li ><a href="register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+        <table id="myTable">
+        <tr class="header">
+            <th style="width:50%;">Book Name</th>
+            <th style="width:30%;">Author</th>
+            <th style="width:20%;">Price</th>
+        </tr>
+        <tr>
+            <td>The Da Vincie Code</td>
+            <td>Dan Brown</td>
+            <td>Rs. 599</td>
+        </tr>
+        <tr>
+            <td>Who Will Cry, When You Die?</td>
+            <td>Robin Sharma</td>
+            <td>Rs. 250</td>
+        </tr>
+        <tr>
+            <td>Digital Fortress</td>
+            <td>Dan Brown</td>
+            <td>Rs. 599</td>
+        </tr>
+        <tr>
+            <td>The Monk Who Sold His Ferrari</td>
+            <td>Robin Sharma</td>
+            <td>Rs. 250</td>
+        </tr>
+        <tr>
+            <td>Eleven Minutes</td>
+            <td>Paulo Coelho</td>
+            <td>Rs. 499</td>
+        </tr>
+        <tr>
+            <td>2 States</td>
+            <td>Chetan Bhagat</td>
+            <td>Rs. 150</td>
+        </tr>
+        <tr>
+            <td>The Three Mistakes of my Life</td>
+            <td>Chetan Bhagat</td>
+            <td>Rs. 150</td>
+        </tr>
+        </table>
+</body>
+</html>

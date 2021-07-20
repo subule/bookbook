@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="register.css">
+    <script>
+      function matchPassword() {  
+        var pw1 = document
+        var pw2 = form.pw2.getValue(); 
+        if(pw1 != pw2)  
+        {   
+          alert("Passwords did not match");  
+        } else {   
+          window.location.href ="booklist.html";
+        }  
+      } 
+    </script>
+    <script>
+      function goToHome(){
+        window.location.href="home.html"
+      }
+    </script>
+    <title>Sign up</title>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand">BookStall.com</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="booklist.html">Books</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li ><a href="register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
+    <form name="myform" method="post" action="booklist.html" onsubmit="matchPassword()" style="border:1px solid #ccc">
+        <div class="container">
+          <h1>Sign Up</h1>
+          <p>Please fill in this form to create an account.</p>
+          <hr>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+      
+          <label for="pswd2"><b>Password</b></label>
+          <input id="pswd1" type="password" placeholder="Enter Password" name="pswd1" required>
+      
+          <label for="pswd2"><b>Repeat Password</b></label>
+          <input id="pswd2" type="password" placeholder="Repeat Password" name="pswd2" required>
+      
+          <div class="clearfix">
+            <button type="button" class="cancelbtn" onclick="goToHome()">Cancel</button>
+            <button type="submit" class="signupbtn" onclick="matchPassword()">Sign Up</button>
+          </div>
+        </div>
+      </form>
+</body>
+</html>
